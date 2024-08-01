@@ -1,0 +1,64 @@
+.card {
+  @include flex(column, center, center);
+  gap: 24px;
+  width: 320px;
+  height: 499px;
+  background-color: $white;
+  padding: 16px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+
+  &__thumb {
+    position: relative;
+    @include flex(row, center, center);
+    width: 288px;
+    height: 288px;
+    border-radius: 10px;
+    background-color: $blue-600;
+    overflow: hidden;
+  }
+
+  &__image {
+    z-index: 2;
+  }
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 328px;
+    height: 328px;
+    border-radius: 50%;
+    background-color: $blue-500;
+    transform: translate(-40%, -50%);
+
+    &--bottom {
+      top: unset;
+      left: unset;
+      bottom: 0;
+      right: 0;
+      width: 270px;
+      height: 270px;
+
+      transform: translate(40%, 70%);
+    }
+  }
+  &__box {
+    @include flex(column, center, center);
+    gap: 16px;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  &__title {
+    font-size: $preset-size-1;
+    font-weight: $preset-weigth-1;
+    line-height: $preset-line-1;
+    color: $slate-900;
+  }
+  &__text {
+    font-size: $preset-size-2;
+    line-height: $preset-line-2;
+    letter-spacing: $preset-letter-2;
+    color: $slate-500;
+  }
+}
