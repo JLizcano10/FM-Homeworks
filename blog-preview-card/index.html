@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Blog preview card</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Blog preview card</h1>
+        <div class="container">
+          <h2>Blog Container</h2>
+          <article class="card">
+            <div class="card__thumb">
+              <img
+                src="./assets/images/illustration-article.svg"
+                alt="illustration article"
+              />
+            </div>
+            <div class="card__content">
+              <p class="card__headline">Learning</p>
+              <p class="card__date">
+                Published <time datetime="2023-12-21">21 Dec 2023</time>
+              </p>
+              <h3 class="card__title">HTML & CSS foundations</h3>
+              <p class="card__text">
+                These languages are the backbone of every website, defining
+                structure, content, and presentation.
+              </p>
+            </div>
+            <div class="card__footer">
+              <img
+                class="card__avatar"
+                src="./assets/images/image-avatar.webp"
+                alt="avatar"
+              />
+              <p class="card__author">Greg Hooper</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
