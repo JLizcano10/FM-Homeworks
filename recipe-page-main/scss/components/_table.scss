@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row {
+    border-bottom: 1px solid $stone-150;
+  }
+
+  &__data {
+    width: 50%;
+    padding: 10px;
+    padding-left: 20px;
+    color: $stone-600;
+    font-size: $font-size-paragraph;
+
+    &--color {
+      padding-left: 0px;
+      color: $brown-800;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}
