@@ -1,0 +1,12 @@
+@mixin flex($dir, $jus, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $align;
+}
+
+@mixin desktop-screen {
+  @media only screen and (min-width: 1439.9px) {
+    @content;
+  }
+}

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $montserrat-family-font;
+  font-size: $main-font-size;
+  background-color: $body-bg-color;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: $fraunces-family-font;
+}
+
+img {
+  // revisar para el responsive
+  // max-inline-size: 100%; Similar max-widht
+  // block-size: auto; Similar height
+  // display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  @include flex(row, center, center);
+}
