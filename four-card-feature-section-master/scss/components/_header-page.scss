@@ -1,0 +1,33 @@
+.header-page {
+  text-align: center;
+  color: $primary-text-color;
+  &__title {
+    margin-bottom: 20px;
+    font-size: $title-font-size;
+    font-weight: $font-weight-extralite;
+    color: $secondary-text-color;
+    &--weight {
+      font-weight: $font-weight-semibold;
+      color: $primary-text-color;
+    }
+  }
+
+  &__text {
+    font-size: $main-font-size;
+    font-weight: $font-weight-extralite;
+    line-height: 1.5;
+    color: $secondary-text-color;
+  }
+}
+
+@include desktop-screen {
+  .header-page {
+    &__container {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    &__text {
+      font-weight: $font-weight-normal;
+    }
+  }
+}
