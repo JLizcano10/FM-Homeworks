@@ -1,0 +1,36 @@
+.card-table {
+  width: 100%;
+  &__body {
+    display: grid;
+    gap: 40px;
+    padding-left: 15px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    gap: 10px;
+  }
+  &__skill {
+    color: $light-red;
+
+    &--memory {
+      color: $orangey-yellow;
+    }
+    &--verbal {
+      color: $green-teal;
+    }
+    &--visual {
+      color: $cobalt-blue;
+    }
+  }
+
+  &__result {
+    font-weight: $font-weight-medium;
+    color: rgba($dark-gray-blue, 0.5);
+    justify-self: end;
+  }
+  &__accent {
+    color: $dark-gray-blue;
+  }
+}

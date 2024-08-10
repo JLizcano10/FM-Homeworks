@@ -1,0 +1,20 @@
+.button {
+  width: 100%;
+  font-size: $font-size-btn;
+  font-weight: $font-weight-medium;
+  padding: 18px;
+  color: $white;
+  background-color: $dark-gray-blue;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(
+      $light-slate-blue-bg,
+      $light-royal-blue-bg
+    );
+  }
+}

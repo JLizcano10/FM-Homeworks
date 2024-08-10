@@ -1,0 +1,103 @@
+.card {
+  max-width: 750px;
+
+  &__header {
+    @include flex(column, space-between, center);
+    gap: 28px;
+    padding: 28px 60px 40px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    background-image: linear-gradient(
+      $light-slate-blue-bg,
+      $light-royal-blue-bg 95%
+    );
+    color: $pale-blue;
+  }
+  &__result {
+    font-weight: $font-weight-medium;
+    color: rgba($pale-blue, 0.7);
+  }
+  &__circle {
+    @include flex(column, center, center);
+    gap: 10px;
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+    background-image: linear-gradient(
+      $violet-blue-circle 20%,
+      $violet-blue-circle 40%,
+      $persian-blue-circle
+    );
+  }
+  &__score {
+    font-size: $font-size-score;
+    font-weight: $font-weight-extrabold;
+  }
+  &__res {
+    color: rgba($pale-blue, 0.5);
+  }
+  &__info {
+    @include flex(column, center, center);
+    gap: 18px;
+  }
+  &__clasification {
+    font-size: $font-size-clasification;
+    font-weight: $font-weight-bold;
+  }
+  &__message {
+    color: rgba($pale-blue, 0.7);
+  }
+  &__section {
+    @include flex(column, space-between, flex-start);
+    gap: 40px;
+    padding: 28px 60px 40px;
+  }
+  &__summary {
+    font-weight: $font-weight-medium;
+  }
+}
+
+@include desktop-screen {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__header {
+      @include flex(column, flex-start, center);
+      gap: 40px;
+      padding: 40px;
+      border-radius: 30px;
+    }
+
+    &__circle {
+      width: 200px;
+      height: 200px;
+    }
+    &__score {
+      font-size: 70px;
+      font-weight: $font-weight-extrabold;
+    }
+    &__res {
+      color: rgba($pale-blue, 0.5);
+    }
+    &__info {
+      @include flex(column, center, center);
+      gap: 18px;
+    }
+    &__clasification {
+      font-size: 26px;
+      font-weight: $font-weight-bold;
+    }
+    &__message {
+      color: rgba($pale-blue, 0.7);
+    }
+    &__section {
+      @include flex(column, space-between, flex-start);
+      gap: 40px;
+      padding: 40px;
+    }
+    &__summary {
+      font-weight: $font-weight-medium;
+    }
+  }
+}
