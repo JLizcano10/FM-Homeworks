@@ -1,0 +1,108 @@
+.card {
+  @include flex(column, center, flex-start);
+  gap: 24px;
+  width: 327px;
+  background: $dark-blue-card-bg;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0px 32px 27px 11px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &__over {
+    position: relative;
+    width: 100%;
+    height: 279px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__fig {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($cyan, 0.3);
+    transition: display 500ms ease;
+  }
+
+  &__over:hover &__view {
+    @include flex(row, center, center);
+  }
+
+  &__content {
+    @include flex(column, center, flex-start);
+    gap: 18px;
+  }
+
+  &__title {
+    font-weight: $font-weight-semibold;
+    color: $white;
+    transition: color 250ms ease;
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  &__info {
+    position: relative;
+    @include flex(row, space-between, center);
+    width: 100%;
+    padding-bottom: 20px;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $dark-blue-line;
+    }
+  }
+
+  &__item {
+    @include flex(row, center, center);
+    gap: 10px;
+  }
+
+  &__value {
+    &--accent {
+      font-weight: $font-weight-semibold;
+      color: $cyan;
+    }
+  }
+
+  &__footer {
+    @include flex(row, center, center);
+    gap: 15px;
+  }
+
+  &__thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid $soft-blue;
+  }
+
+  &__author {
+    color: $white;
+    transition: color 250ms ease;
+    &:hover {
+      color: $cyan;
+    }
+  }
+}
+
+@include desktop-screen {
+  .card {
+    width: 350px;
+  }
+}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+$font-family: "Outfit", sans-serif;
+$font-size-paragraph: clamp(16px, 2px + 1vw, 18px);
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+
+// Primary
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Neutral
+
+$dark-blue-main-bg: hsl(217, 54%, 11%);
+$dark-blue-card-bg: hsl(216, 50%, 16%);
+$dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
