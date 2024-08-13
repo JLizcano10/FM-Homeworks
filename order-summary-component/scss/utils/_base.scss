@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $pale-blue;
+  display: grid;
+  grid-template-rows: 1rem 1fr 1rem;
+  grid-template-areas:
+    "."
+    "main"
+    "attribution";
+  height: 100dvh;
+  font-family: $font-family;
+  font-size: $font-size-paragraph;
+  font-weight: $font-weight-medium;
+  line-height: 1.5;
+  color: $desaturated-blue;
+  background-image: url(../../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  grid-area: main;
+  place-self: center;
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+.attribution {
+  grid-area: attribution;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@include desktop-screen {
+  body {
+    background-image: url(../../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
