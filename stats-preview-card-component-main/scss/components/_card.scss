@@ -1,0 +1,95 @@
+.card {
+  border-radius: 10px;
+  background-color: $card-bg;
+  overflow: hidden;
+  width: 327px;
+  height: 780px;
+  &__header {
+    background-image: url(../../images/image-header-mobile.jpg);
+    background-color: $accent;
+    // Nueva propiedad que no conocia.
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 240px;
+  }
+
+  &__content {
+    @include flex(column, center, center);
+    gap: 40px;
+    padding: 35px;
+  }
+  &__info {
+    @include flex(column, center, center);
+    gap: 18px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: $bold-font-weight;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+  &__accent {
+    color: $accent;
+  }
+  &__text {
+    color: $main-paragraph-color;
+  }
+  &__list {
+    @include flex(column, center, center);
+    gap: 30px;
+    text-align: center;
+  }
+  &__item {
+  }
+  &__value {
+    font-family: $deca-font-family;
+    font-weight: $bold-font-weight;
+    font-size: 24px;
+  }
+  &__tag {
+    text-transform: uppercase;
+    color: $main-text-transparency;
+  }
+}
+
+@include desktop-screen {
+  .card {
+    display: grid;
+    grid-template-columns: 570px 540px;
+    grid-template-rows: 448px;
+    width: 1110px;
+    height: 448px;
+    &__header {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      height: 100%;
+      background-image: url(../../images/image-header-desktop.jpg);
+    }
+
+    &__content {
+      grid-column: 1/2;
+      grid-row: 1/2;
+
+      @include flex(column, space-between, center);
+      padding: 65px;
+    }
+    &__info {
+      gap: 30px;
+      text-align: left;
+    }
+    &__title {
+      font-size: 32px;
+      text-wrap: balance;
+    }
+
+    &__list {
+      @include flex(row, flex-start, center);
+      gap: 60px;
+      width: 100%;
+    }
+    &__value {
+      font-size: 24px;
+    }
+  }
+}
