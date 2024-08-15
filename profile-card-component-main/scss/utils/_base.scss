@@ -1,0 +1,47 @@
+body {
+  display: grid;
+  grid-template-rows: 1rem 1fr 1rem;
+  grid-template-areas:
+    "."
+    "main"
+    "attribution";
+  height: 100dvh;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: $normal-font-weight;
+  background-color: $dark-cyan;
+  background-blend-mode: soft-light;
+  background-image: url(../../images/bg-pattern-top.svg),
+    url(../../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(-50vw + 100%) calc(-50vh + 10%),
+    calc(50vw + 15%) calc(50vh + 10%);
+}
+main {
+  grid-area: main;
+  padding-left: 24px;
+  padding-right: 24px;
+  place-self: center;
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+.attribution {
+  grid-area: attribution;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@include desktop-screen {
+  body {
+    background-position: calc(-50vw + 92%) calc(-50vh + 10%),
+      calc(50vw) calc(50vh + 5%);
+  }
+}
