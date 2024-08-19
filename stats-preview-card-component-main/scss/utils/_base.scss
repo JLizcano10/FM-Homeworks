@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  grid-template-rows: 1rem 1fr 1rem;
+  grid-template-areas:
+    "."
+    "main"
+    "attribution";
+  height: 100dvh;
+  font-family: $inter-font-family;
+  font-size: $main-font-size;
+  line-height: 1.5;
+  color: $main-text-color;
+  background-color: $main-bg;
+}
+
+main {
+  grid-area: main;
+  padding-left: 24px;
+  padding-right: 24px;
+  place-self: center;
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+.attribution {
+  grid-area: attribution;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
