@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Results summary component</title>
+  </head>
+  <body>
+    <h1>frontendmentor</h1>
+    <main>
+      <h2>Results summary component</h2>
+      <article class="card">
+        <header class="card__header">
+          <p class="card__result">Your Result</p>
+          <div class="card__circle">
+            <p class="card__score">76</p>
+            <p class="card__res">of 100</p>
+          </div>
+          <div class="card__info">
+            <p class="card__clasification">Great</p>
+            <p class="card__message">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </header>
+        <section class="card__section">
+          <h4 class="card__summary">Summary</h4>
+          <table class="card-table">
+            <tbody class="card-table__body">
+              <tr class="card-table__row">
+                <td>
+                  <img
+                    src="./assets/images/icon-reaction.svg"
+                    alt="reaction icon"
+                  />
+                </td>
+                <td class="card-table__skill">Reaction</td>
+                <td class="card-table__result">
+                  <span class="card-table__accent">80 </span> / 100
+                </td>
+              </tr>
+              <tr class="card-table__row">
+                <td>
+                  <img
+                    src="./assets/images/icon-memory.svg"
+                    alt="Memory icon"
+                  />
+                </td>
+                <td class="card-table__skill card-table__skill--memory">
+                  Memory
+                </td>
+                <td class="card-table__result">
+                  <span class="card-table__accent">92 </span> / 100
+                </td>
+              </tr>
+              <tr class="card-table__row">
+                <td>
+                  <img
+                    src="./assets/images/icon-verbal.svg"
+                    alt="Verbal icon"
+                  />
+                </td>
+                <td class="card-table__skill card-table__skill--verbal">
+                  Verbal
+                </td>
+                <td class="card-table__result">
+                  <span class="card-table__accent">61 </span> / 100
+                </td>
+              </tr>
+              <tr class="card-table__row">
+                <td>
+                  <img
+                    src="./assets/images/icon-visual.svg"
+                    alt="Visual icon"
+                  />
+                </td>
+                <td class="card-table__skill card-table__skill--visual">
+                  Visual
+                </td>
+                <td class="card-table__result">
+                  <span class="card-table__accent">72 </span> / 100
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="button" type="button">Continue</button>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
