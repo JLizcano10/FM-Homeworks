@@ -1,0 +1,89 @@
+.card {
+  width: 343px;
+  border-radius: 10px;
+  background-color: $card-bg-color;
+  overflow: hidden;
+
+  &__thumb {
+    width: 100%;
+    height: 242px;
+    overflow: hidden;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    @include flex(column, space-between, flex-start);
+    gap: 25px;
+    padding: 25px;
+    font-weight: $font-weight-medium;
+    color: $secondary-font-color;
+  }
+
+  &__header {
+    @include flex(column, flex-start, flex-start);
+    gap: 18px;
+  }
+
+  &__label {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: $font-weight-bold;
+    line-height: 100%;
+    color: $primary-font-color;
+    text-wrap: balance;
+  }
+
+  &__description {
+    line-height: 150%;
+  }
+
+  &__price {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+  }
+
+  &__promo {
+    font-family: $fraunces-family-font;
+    font-weight: $font-weight-bold;
+    // font-size: 25px;
+    font-size: clamp(25px, 3vw, 28px);
+    color: $accent-color;
+  }
+}
+
+@include desktop-screen {
+  .card {
+    @include flex(row, space-between, flex-start);
+    // Importante definir ancho y alto
+    width: 600px;
+    height: 450px;
+    &__thumb {
+      width: 300px;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &__content {
+      @include flex(column, space-between, flex-start);
+      width: 300px;
+      padding: 34px;
+    }
+
+    &__description {
+      text-wrap: balance;
+    }
+
+    &__price {
+      @include flex(row, flex-start, center);
+      gap: 10px;
+    }
+  }
+}
