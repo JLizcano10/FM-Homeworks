@@ -1,0 +1,43 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./components/card";
+@import "./components/section";
+@import "./components/table";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-outfit;
+  background-color: $stone-100;
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+h3,
+h4 {
+  font-family: $font-family-young;
+}
+
+ul li::marker {
+  color: $rose-800;
+}
+
+ol li::marker {
+  font-weight: $font-weight-semibold;
+  color: $brown-800;
+}
+
+li {
+  padding-left: 20px;
+}
+
+.container {
+  @include flex(row, center, flex-start);
+}

@@ -1,0 +1,54 @@
+.section {
+  @include flex(column, center, flex-start);
+  gap: 25px;
+  padding-top: 30px;
+  border-bottom: 1px solid $stone-150;
+
+  &:not(:last-child) {
+    padding-bottom: 30px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &--padding-left {
+    padding-left: 20px;
+    background-color: $rose-50;
+    border-radius: 10px;
+    border-bottom: none;
+  }
+  &__title {
+    font-size: 20px;
+    color: $brown-800;
+
+    &--preparation {
+      font-size: $font-size-paragraph;
+      color: $rose-800;
+    }
+  }
+  &__list {
+    @include flex(column, center, flex-start);
+    gap: 15px;
+    padding-left: 20px;
+  }
+  &__item-text {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-paragraph;
+    text-wrap: pretty;
+    color: $stone-600;
+  }
+
+  &__span {
+    font-weight: $font-weight-bold;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__value {
+    color: $brown-800;
+    font-weight: $font-weight-semibold;
+  }
+}
