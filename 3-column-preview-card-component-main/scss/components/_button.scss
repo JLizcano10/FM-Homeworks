@@ -1,0 +1,26 @@
+.button {
+  width: 150px;
+  height: 48px;
+  font-weight: $bold-font-weight;
+  border-radius: 30px;
+  border: none;
+  background-color: $light-gray;
+  color: $orange;
+  cursor: pointer;
+  transition: background-color 250ms ease, color 250ms ease, outline 250ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: inherit;
+    color: inherit;
+    border: 2px solid $light-gray;
+  }
+
+  &--suvs {
+    color: $secondary-dark-cyan;
+  }
+
+  &--luxury {
+    color: $main-dark-cyan;
+  }
+}
