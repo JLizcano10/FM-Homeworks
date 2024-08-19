@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+$font-family: "League Spartan", sans-serif;
+$main-font-size: 15px;
+$bold-font-weight: 700;
+$medium-font-weight: 500;
+$normal-font-weight: 400;
+
+// Colors with map-get
+
+$colors: (
+  "dark-magenta": hsl(300, 43%, 22%),
+  "gray-magenta": hsl(303, 10%, 53%),
+  "light-magenta": hsl(300, 24%, 96%),
+  "pink": hsl(333, 80%, 67%),
+  "white": hsl(0, 0%, 100%),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

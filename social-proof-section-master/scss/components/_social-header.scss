@@ -1,0 +1,30 @@
+.social-header {
+  @include flex(column, flex-start, center);
+  gap: 20px;
+  text-align: center;
+  padding-bottom: 60px;
+  &__title {
+    font-size: 36px;
+    font-weight: $bold-font-weight;
+    letter-spacing: 0.01em;
+    line-height: 0.8;
+    color: getColor("dark-magenta");
+  }
+  &__text {
+    font-weight: $medium-font-weight;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: getColor("gray-magenta");
+  }
+}
+
+@include desktop-screen {
+  .social-header {
+    text-align: left;
+    padding-right: 85px;
+    &__title {
+      font-size: 46px;
+      line-height: 1;
+    }
+  }
+}

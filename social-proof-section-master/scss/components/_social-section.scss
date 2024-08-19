@@ -1,0 +1,16 @@
+.social-section {
+  width: 327px;
+  height: 1350px;
+  padding-top: 50px;
+}
+
+@include desktop-screen {
+  .social-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 1300px;
+    height: 720px;
+    padding: 94px 150px;
+  }
+}
