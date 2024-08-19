@@ -1,0 +1,67 @@
+.card {
+  width: 327px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $white;
+  box-shadow: 0px 0px 100px -32px $dark-desaturated-blue;
+  &__header {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: 192px;
+    overflow: hidden;
+  }
+  &__hero {
+    grid-column: 1;
+    grid-row: 1/4;
+    background-image: url(../../images/bg-pattern-card.svg);
+  }
+  &__photo {
+    grid-column: 1;
+    grid-row: 3/5;
+    justify-self: center;
+  }
+
+  &__img {
+    border-radius: 50%;
+    outline: 4px solid $white;
+  }
+  &__content {
+    @include flex(column, flex-start, center);
+    gap: 50px;
+    padding: 25px 40px;
+    color: $dark-gray;
+  }
+  &__user {
+    @include flex(column, flex-start, center);
+    gap: 14px;
+  }
+  &__name {
+    font-size: $accent-font-size;
+    font-weight: $bold-font-weight;
+    color: $dark-desaturated-blue;
+  }
+  &__age {
+    font-weight: $normal-font-weight;
+    color: $dark-grayish-blue;
+  }
+
+  &__stats {
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+  &__item {
+    @include flex(column, center, center);
+  }
+  &__value {
+    font-size: $accent-font-size;
+    font-weight: $bold-font-weight;
+    color: $dark-desaturated-blue;
+  }
+}
+
+@include desktop-screen {
+  .card {
+    width: 350px;
+  }
+}
