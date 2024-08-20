@@ -1,0 +1,70 @@
+.card {
+  border-radius: 10px;
+  background-color: getColor("gray");
+  box-shadow: 0px 7px 32px -9px getColor("blue");
+  overflow: hidden;
+
+  &__header {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    padding: 24px;
+    padding-bottom: 36px;
+  }
+  &__title {
+    font-weight: $normal-font-weight;
+    color: getColor("cyan");
+  }
+  &__guarantee {
+    color: darken(getColor("yellow"), 5%);
+  }
+  &__intro {
+    color: getColor("blue");
+  }
+  &__content {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    padding: 24px;
+    background-color: getColor("cyan");
+    &--lighten {
+      background-color: lighten(getColor("cyan"), 2%);
+    }
+  }
+  &__subtitle {
+    font-weight: $bold-font-weight;
+  }
+
+  &__price {
+    @include flex(row, flex-start, center);
+    color: rgba(getColor("gray"), 0.5);
+  }
+  &__accent {
+    font-size: 28px;
+    font-weight: $bold-font-weight;
+    color: getColor("gray");
+  }
+  &__topic {
+    color: rgba(getColor("gray"), 0.7);
+  }
+}
+
+@include desktop-screen {
+  .card {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 635px;
+    height: 528px;
+
+    &__header {
+      @include flex(column, space-between, flex-start);
+      padding: 40px;
+    }
+    &__section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__content {
+      @include flex(column, space-between, flex-start);
+      padding: 38px;
+    }
+  }
+}

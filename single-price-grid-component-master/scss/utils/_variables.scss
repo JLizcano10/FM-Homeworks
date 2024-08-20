@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+$font-family: "Karla", sans-serif;
+$main-font-size: clamp(14px, 2px + 1vw, 16px);
+$bold-font-weight: 700;
+$normal-font-weight: 400;
+
+$colors: (
+  "cyan": hsl(179, 62%, 43%),
+  "yellow": hsl(71, 73%, 54%),
+  "gray": hsl(204, 43%, 93%),
+  "blue": hsl(218, 22%, 67%),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

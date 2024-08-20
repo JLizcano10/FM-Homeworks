@@ -1,0 +1,10 @@
+.button {
+  font-weight: $bold-font-weight;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  width: 100%;
+  height: 46px;
+  background-color: getColor("yellow");
+  color: getColor("gray");
+}

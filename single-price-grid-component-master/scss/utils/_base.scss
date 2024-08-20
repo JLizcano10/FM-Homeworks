@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "."
+    "main"
+    "footer";
+  grid-template-rows: 1rem 1fr 1rem;
+  height: 100dvh;
+  background-color: getColor("gray");
+  font-family: $font-family;
+  font-size: $main-font-size;
+  font-weight: $normal-font-weight;
+  line-height: 1.5;
+  color: getColor("gray");
+}
+h1 {
+  display: none;
+}
+main {
+  grid-area: main;
+  padding-left: 32px;
+  padding-right: 32px;
+  place-self: center;
+}
+footer {
+  grid-area: footer;
+}
+.attribution {
+  color: getColor("cyan");
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
