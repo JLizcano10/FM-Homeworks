@@ -1,0 +1,56 @@
+.content {
+  display: grid;
+
+  padding-top: 140px;
+  &__thumb {
+    padding-bottom: 140px;
+    justify-self: center;
+  }
+  &__section {
+    @include flex(column, center, center);
+    gap: 55px;
+    padding-bottom: 130px;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-align: center;
+    text-wrap: balance;
+  }
+  &__text {
+    font-size: 30px;
+    text-align: center;
+    text-wrap: pretty;
+    letter-spacing: 0.05em;
+  }
+}
+
+@include desktop-screen {
+  .content {
+    grid-template-columns: 698px 515px;
+    gap: 60px;
+    padding-top: 104px;
+    &__thumb {
+      padding-top: 0;
+      padding-bottom: 0;
+      justify-self: center;
+    }
+    &__section {
+      @include flex(column, flex-start, flex-start);
+      gap: 40px;
+      padding-bottom: 0;
+      padding-top: 50px;
+    }
+    &__title {
+      font-size: 36px;
+      text-align: left;
+    }
+    &__text {
+      font-size: 16px;
+      text-align: left;
+      letter-spacing: 0.06em;
+    }
+  }
+}

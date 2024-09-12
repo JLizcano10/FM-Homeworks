@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  grid-template-rows: 7rem 1fr 2rem;
+  height: 100dvh;
+  font-weight: $font-weight-normal;
+  background-color: getColor("violet");
+  background-image: url(../../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 750px;
+  color: getColor("white");
+}
+
+h2 {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  padding-left: clamp(20px, 10vw, 80px);
+  padding-right: clamp(20px, 10vw, 80px);
+  // margin: 0 auto;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@include desktop-screen {
+  body {
+    background-image: url(../../images/bg-desktop.svg);
+    background-size: contain;
+  }
+}

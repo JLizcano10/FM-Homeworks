@@ -1,0 +1,22 @@
+.button {
+  @include flex(row, center, center);
+  padding: 30px 106px;
+  font-size: 20px;
+  color: getColor("violet");
+  border-radius: 46px;
+  box-shadow: rgba(getColor("black"), 0.25) 0px 13px 27px -5px,
+    rgba(getColor("black"), 0.3) 0px 8px 16px -8px;
+  background-color: getColor("white");
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: getColor("magenta");
+  }
+}
+
+@include desktop-screen {
+  .button {
+    padding: 16px 65px;
+  }
+}
