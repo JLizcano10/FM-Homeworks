@@ -1,0 +1,41 @@
+.post-timing {
+  @include flex(column, flex-start, center);
+  gap: 26px;
+  padding: 32px 16px;
+  background-color: getColor("purple100");
+  &__title {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+  }
+  // &__thumb {
+  // }
+  &__text {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@include desktop-screen {
+  .post-timing {
+    grid-area: post;
+    @include flex(column, flex-start, flex-start);
+    gap: 26px;
+    padding: 50px 0 50px 32px;
+    background-color: getColor("purple100");
+    &__title {
+      font-size: 32px;
+      line-height: 0.9;
+    }
+    &__thumb {
+      height: 320px;
+
+      img {
+        height: 100%;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+}

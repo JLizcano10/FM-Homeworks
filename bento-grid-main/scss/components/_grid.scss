@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  gap: 32px;
+
+  &__item {
+    border-radius: 10px;
+  }
+}
+
+@include desktop-screen {
+  .grid {
+    grid-template-columns: repeat(4, 256px);
+    grid-template-rows: 320px 92px 140px 220px;
+    grid-template-areas:
+      "create social social post"
+      "create account posting post"
+      "write account posting post"
+      "write audience followers followers";
+  }
+}

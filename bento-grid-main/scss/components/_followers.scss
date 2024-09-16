@@ -1,0 +1,29 @@
+.followers {
+  @include flex(column, flex-start, center);
+  gap: 38px;
+  padding: 24px 58px;
+  background-color: getColor("purple500");
+  // &__thumb {
+  // }
+  &__title {
+    font-size: 26px;
+    font-weight: $font-weight-medium;
+    color: getColor("purple100");
+    text-align: center;
+  }
+}
+
+@include desktop-screen {
+  .followers {
+    grid-area: followers;
+    @include flex(row, flex-start, center);
+    gap: 12px;
+    padding: 24px;
+    background-color: getColor("purple500");
+    &__title {
+      font-size: 32px;
+      text-align: left;
+      line-height: 0.9;
+    }
+  }
+}

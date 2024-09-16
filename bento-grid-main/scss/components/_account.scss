@@ -1,0 +1,25 @@
+.account {
+  @include flex(column, flex-start, center);
+  gap: 32px;
+  // &__thumb{}
+  padding: 18px;
+  &__title {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+  }
+}
+
+@include desktop-screen {
+  .account {
+    grid-area: account;
+    @include flex(column, space-between, center);
+    gap: 32px;
+    padding: 25px;
+    &__title {
+      font-size: 30px;
+      text-align: left;
+      text-wrap: balance;
+      line-height: 0.9;
+    }
+  }
+}

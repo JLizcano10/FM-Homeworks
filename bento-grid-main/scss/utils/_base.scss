@@ -1,0 +1,43 @@
+body {
+  display: grid;
+  grid-template-rows: 1rem 1fr 1rem;
+  grid-template-areas:
+    "."
+    "main"
+    "attribution";
+  gap: 20px;
+  height: 100dvh;
+  font-family: $font-family;
+  font-size: $font-size-paragraph;
+  font-weight: $font-weight-normal;
+  background-color: getColor("white");
+}
+
+h1 {
+  display: none;
+}
+main {
+  grid-area: main;
+  justify-self: center;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.attribution {
+  grid-area: attribution;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@include desktop-screen {
+  .container {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}

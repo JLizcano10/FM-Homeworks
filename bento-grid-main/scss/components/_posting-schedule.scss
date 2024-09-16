@@ -1,0 +1,29 @@
+.posting-schedule {
+  @include flex(column, flex-start, flex-start);
+  gap: 14px;
+  padding: 20px 20px 0;
+  background-color: getColor("yellow500");
+  &__title {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    text-wrap: balance;
+  }
+  &__thumb {
+    width: 208px;
+  }
+}
+
+@include desktop-screen {
+  .posting-schedule {
+    grid-area: posting;
+    @include flex(column, space-between, flex-start);
+    padding: 25px;
+    padding-bottom: 0;
+    &__title {
+      font-size: 32px;
+      font-weight: $font-weight-medium;
+      text-wrap: balance;
+      line-height: 0.9;
+    }
+  }
+}

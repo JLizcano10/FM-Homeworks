@@ -1,0 +1,30 @@
+.create {
+  @include flex(column, flex-start, flex-start);
+  gap: 24px;
+  padding: 32px;
+  background-color: getColor("yellow100");
+  &__title {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+  }
+
+  &__span {
+    color: getColor("purple500");
+    font-style: italic;
+  }
+
+  &__thumb {
+    width: 190px;
+  }
+}
+
+@include desktop-screen {
+  .create {
+    grid-area: create;
+    @include flex(column, center, flex-start);
+    &__title {
+      font-size: 36px;
+      line-height: 0.9;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.audience {
+  @include flex(column, flex-start, flex-start);
+  gap: 24px;
+  padding: 24px;
+  &__title {
+    font-size: 36px;
+    font-weight: $font-weight-medium;
+    text-wrap: balance;
+  }
+  // &__text {
+  // }
+  &__thumb {
+    width: 180px;
+  }
+}
+
+@include desktop-screen {
+  .audience {
+    grid-area: audience;
+    @include flex(column, flex-start, flex-start);
+    &__title {
+      font-size: 46px;
+      text-wrap: balance;
+      line-height: 0.9;
+    }
+  }
+}

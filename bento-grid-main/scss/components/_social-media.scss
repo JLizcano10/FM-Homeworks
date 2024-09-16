@@ -1,0 +1,43 @@
+.social-media {
+  @include flex(column, flex-start, center);
+  gap: 32px;
+  padding: 42px;
+  background-color: getColor("purple500");
+  color: getColor("yellow100");
+
+  &__title {
+    font-size: 36px;
+    font-weight: $font-weight-medium;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__span {
+    color: getColor("yellow500");
+  }
+  &__italic {
+    font-style: italic;
+  }
+
+  &__box {
+    @include flex(column, flex-start, center);
+    gap: 14px;
+  }
+
+  &__thumb {
+    width: 186px;
+  }
+}
+
+@include desktop-screen {
+  .social-media {
+    grid-area: social;
+    @include flex(column, center, center);
+    padding: 42px;
+
+    &__title {
+      font-size: 46px;
+      line-height: 0.9;
+    }
+  }
+}
